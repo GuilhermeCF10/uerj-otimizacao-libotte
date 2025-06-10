@@ -64,41 +64,57 @@ graph TD
 ```
 ## Como Executar
 
-1.  **Crie um Ambiente Virtual**
+Para executar este projeto, primeiro clone o repositório e navegue até a pasta `optimzed_tank`.
 
-    É uma boa prática usar um ambiente virtual para isolar as dependências do projeto.
+```bash
+git clone <URL_DO_REPOSITORIO>
+cd optimzed_tank
+```
 
-    ```bash
-    python -m venv venv
-    ```
+A partir daqui, você pode configurar o ambiente de duas maneiras:
 
-2.  **Ative o Ambiente Virtual**
+### Opção 1: Usando `venv` (Padrão Python)
+
+1.  **Crie e Ative o Ambiente Virtual**
 
     -   No Linux/macOS:
         ```bash
+        python3 -m venv venv
         source venv/bin/activate
         ```
     -   No Windows:
         ```bash
+        python -m venv venv
         .\\venv\\Scripts\\activate
         ```
 
-3.  **Instale as Dependências**
-
-    Com o ambiente ativado, instale as bibliotecas necessárias:
-
+2.  **Instale as Dependências**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Execute a Aplicação**
-
-    Navegue até o diretório `optimzed_tank` e execute o servidor Flask:
-
+3.  **Execute a Aplicação**
     ```bash
-    cd optimzed_tank
-    flask run
+    python3 app.py
     ```
 
-    A aplicação estará disponível em `http://127.0.0.1:5000` no seu navegador.
+### Opção 2: Usando `conda`
+
+1.  **Crie e Ative o Ambiente Virtual**
+    ```bash
+    conda create --name optimized_tank python=3.12 -y
+    conda activate optimized_tank
+    ```
+
+2.  **Instale as Dependências**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3.  **Execute a Aplicação**
+    ```bash
+    python3 app.py
+    ```
+
+Após executar um dos comandos acima, a aplicação estará disponível em `http://127.0.0.1:5000` no seu navegador.
 
